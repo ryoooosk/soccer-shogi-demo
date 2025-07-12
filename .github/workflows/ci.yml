@@ -31,8 +31,7 @@ jobs:
       run: npm run lint
 
     - name: Run tests with coverage
-      run: npm run test:coverage -- --run --reporter=json --reporter=json-summary --outputFile=test-results.json
-      continue-on-error: true
+      run: npm run test:coverage -- --run --reporter=json --outputFile=test-results.json
 
     - name: Build project
       run: npm run build
