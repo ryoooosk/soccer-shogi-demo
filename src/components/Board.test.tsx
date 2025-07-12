@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Board } from './Board';
 import { createInitialGameState } from '../game/gameLogic';
-import type { GameState, Position } from '../types/game';
+import type { GameState } from '../types/game';
 
 // モックのゲーム状態を作成するヘルパー関数
 const createMockGameState = (overrides: Partial<GameState> = {}): GameState => {
@@ -160,7 +160,7 @@ describe('Board', () => {
       
       // CSSクラスが正しく適用されているかを確認
       // これは実装詳細のテストになるため、必要に応じて調整
-      const cells = container.querySelectorAll('[role=\"button\"]');
+      const cells = container.querySelectorAll('[role="button"]');
       expect(cells.length).toBe(63);
     });
   });

@@ -10,7 +10,6 @@ import {
   BOARD_WIDTH,
   BOARD_HEIGHT,
 } from './gameLogic';
-import type { Position, Board } from '../types/game';
 
 describe('gameLogic', () => {
   describe('createInitialGameState', () => {
